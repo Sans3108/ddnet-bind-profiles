@@ -1,0 +1,23 @@
+{
+  "name": "ddnet-bind-profiles",
+  "module": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/server.ts",
+    "cleanup": "rimraf out",
+    "prod": "bun cleanup && bun build --compile --minify --sourcemap src/server.ts --outfile out/ddnet-bind-profiles"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "rimraf": "^5.0.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "out-url": "^1.2.2"
+  }
+}

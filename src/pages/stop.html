@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bind Profiles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Nunito, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: rgb(27, 27, 27);
+        color: white;
+      }
+
+      .content {
+        width: 80vw; /* Adjust as needed */
+        height: 80vh; /* Adjust as needed */
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>App closed</h1>
+      <p>DDNet Bind Profiles has been closed, you can close this window now.</p>
+    </div>
+  </body>
+  <script>
+    fetch('/api/stop').catch(() => {});
+  </script>
+</html>
